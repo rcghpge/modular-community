@@ -1,10 +1,14 @@
-# Build the package from ../.. with:
+# To test, build this package with:
 # rattler-build build \
 #  --recipe llama3/recipe/recipe.yaml \
 #  --channel conda-forge \
 #  --channel "https://conda.modular.com/max" \
 #  --channel "https://repo.prefix.dev/modular-devrel" \
 #  --verbose
+
+# prometheus-async and faster-fifo are not on conda-forge
+# We need to get them up there, or put them on conda.modular.com
+# For now they are located at: https://repo.prefix.dev/modular-devrel
 
 package:
   name: max-pipelines-core
