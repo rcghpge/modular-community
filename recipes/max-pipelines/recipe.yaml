@@ -11,7 +11,7 @@
 # For now they are located at: https://repo.prefix.dev/modular-devrel
 
 package:
-  name: max-pipelines-core
+  name: max-pipelines
   version: 0.0.1
 
 about:
