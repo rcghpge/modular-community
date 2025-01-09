@@ -19,7 +19,8 @@ about:
 
 source:
   git: https://github.com/modularml/max.git
-  tag: "max/v24.6.0"
+  branch: "pipelines-package"
+#  tag: "max/v24.6.0"
 
 requirements:
   host:
@@ -49,4 +50,4 @@ requirements:
 
 build:
   noarch: python
-  script: pip install --no-deps -vv pipelines/python
+  script: cd pipelines/python && pip install --no-deps -vv .
