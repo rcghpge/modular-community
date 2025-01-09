@@ -1,0 +1,48 @@
+# Build the package from ../.. with:
+# rattler-build build \
+#  --recipe llama3/recipe/recipe.yaml \
+#  --channel conda-forge \
+#  --channel "https://conda.modular.com/max" \
+#  --channel "https://repo.prefix.dev/modular-devrel" \
+#  --verbose
+
+package:
+  name: max-pipelines-core
+  version: 0.0.1
+
+about:
+  description: Shared code for pipelines built with MAX Engine
+
+source:
+  git: https://github.com/modularml/max.git
+  tag: "max/v24.6.0"
+
+requirements:
+  host:
+    - python >=3.9,<3.13
+    - pip
+    - hatchling
+  run:
+    - python >=3.9,<3.13
+    - pip
+    - max ==24.6.0
+    - click >=8.1.7
+    - gguf >=0.10.0
+    - requests >=2.32.3
+    - sentencepiece >=0.2.0
+    - tokenizers >=0.19.1
+    - transformers >=4.44.2
+    - psutil >=6.0.0
+    - pyinstrument >=4.7.3
+    - prometheus-client >=0.20.0
+    - huggingface_hub >=0.26.2
+    - scipy ==1.13.1
+    - torch ==2.4.1
+    - torchvision ==0.19.1
+    - torchaudio ==2.4.1
+    - prometheus-async >=22.2.0
+    - faster-fifo ==1.4.7
+
+build:
+  noarch: python
+  script: pip install --no-deps -vv pipelines/python
