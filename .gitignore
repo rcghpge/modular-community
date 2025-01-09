@@ -21,3 +21,6 @@ __pycache__/
 
 # mkdocs
 site
+
+# macOS
+.DS_Store
