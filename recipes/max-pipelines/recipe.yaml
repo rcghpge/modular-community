@@ -15,7 +15,7 @@ package:
   version: 0.0.1
 
 about:
-  description: Shared code for pipelines built with MAX Engine
+  description: GenAI models and serving built with MAX
 
 source:
   git: https://github.com/modularml/max.git
